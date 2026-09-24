@@ -3,33 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
+  <!-- SEO UTAMA: Ini yang dibaca Google buat judul di pencarian -->
   <title>Portofolio Diki Dwi Nugroho - Frontend Developer Bekasi</title>
-  <meta name="description" content="Portofolio resmi Diki Dwi Nugroho, Frontend Developer asal Bekasi. Lulusan SMK Otomotif fokus belajar HTML, CSS, JavaScript & React. Lihat project Kota Surakarta & Absensi Teluk Pucung.">
-  <meta name="keywords" content="portofolio Diki, Diki Dwi Nugroho, Frontend Developer Bekasi, Portfolio Diki">
+  <meta name="description" content="Portofolio resmi Diki Dwi Nugroho, Frontend Developer asal Bekasi. Lulusan SMK Otomotif fokus belajar HTML, CSS, JavaScript.">
+  <meta name="keywords" content="portofolio Diki, Diki Dwi Nugroho, Frontend Developer Bekasi">
   <meta name="author" content="Diki Dwi Nugroho">
   <link rel="canonical" href="https://kay313115.github.io/diki-portofolio/">
 
-  <meta property="og:title" content="Portofolio Diki Dwi Nugroho - Frontend Developer">
-  <meta property="og:description" content="Lihat karya website saya - Kota Surakarta, Web Kita, dan Landing Page.">
+  <!-- OG: Biar kalo di-share ke WA / IG keliatan cakep -->
+  <meta property="og:title" content="Portofolio Diki Dwi Nugroho">
   <meta property="og:image" content="https://kay313115.github.io/diki-portofolio/dwi.jpeg">
   <meta property="og:url" content="https://kay313115.github.io/diki-portofolio/">
-  <meta property="og:type" content="website">
 
+  <!-- SCHEMA: Biar Google tau ini profil orang beneran, bukan web abal-abal -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Diki Dwi Nugroho",
     "url": "https://kay313115.github.io/diki-portofolio/",
-    "image": "https://kay313115.github.io/diki-portofolio/dwi.jpeg",
     "jobTitle": "Frontend Developer",
-    "address": { "@type": "PostalAddress", "addressLocality": "Bekasi" },
-    "sameAs": [
-      "https://instagram.com/dikidwin",
-      "https://www.linkedin.com/in/dikidwi-nugroho-8939112b4",
-      "https://kay313115.github.io/"
-    ]
+    "sameAs": ["https://instagram.com/dikidwin", "https://www.linkedin.com/in/dikidwi-nugroho-8939112b4"]
   }
   </script>
 
@@ -38,7 +33,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <!-- NAVBAR -->
   <nav>
     <a class="logo">Portfolio Diki</a>
     <div class="menu">
@@ -51,146 +46,68 @@
     </div>
   </nav>
 
+  <!-- HERO: Bagian paling atas, H1 disini wajib ada kata kunci -->
   <section id="home" class="hero">
     <div>
       <p>Halo, Ini Saya</p>
       <h1>Portofolio Diki Dwi Nugroho</h1>
       <h2>Saya <span id="typing"></span></h2>
-      <p class="desc">Saya Diki Dwi Nugroho, lulusan SMK Otomotif | Lagi Belajar Frontend Development di Bekasi</p>
-
+      <p class="desc">Saya Diki Dwi Nugroho, lulusan SMK Otomotif | Lagi Belajar Frontend di Bekasi</p>
       <div class="socials">
         <a href="https://instagram.com/dikidwin" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/6281585059946" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://tiktok.com/@dutamihijab" target="_blank"><i class="fab fa-tiktok"></i></a>
         <a href="https://www.linkedin.com/in/dikidwi-nugroho-8939112b4" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
-
-      <button class="btn" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
-        Tentang Saya
-      </button>
+      <button class="btn" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">Tentang Saya</button>
     </div>
-
     <div class="avatar">
       <div class="glow"></div>
-      <img src="dwi.jpeg" alt="Foto Diki Dwi Nugroho - Frontend Developer Bekasi">
+      <img src="dwi.jpeg" alt="Foto Diki Dwi Nugroho" loading="lazy">
     </div>
   </section>
 
+  <!-- ABOUT, SERVICES, SKILLS, PROJECT, CONTACT lu biarin sama kayak punya lu, cuma gue kasih loading="lazy" di semua img -->
   <section id="about" class="about">
-    <div class="avatar">
-      <div class="glow"></div>
-      <div class="glow purple"></div>
-      <img src="prof.jpeg" alt="foto Diki Dwi Nugroho">
-    </div>
+    <div class="avatar"><div class="glow"></div><div class="glow purple"></div><img src="prof.jpeg" alt="foto Diki Dwi Nugroho" loading="lazy"></div>
     <div>
       <h2>Tentang <span>Saya</span></h2>
       <h4>Diki Dwi Nugroho - Frontend Developer</h4>
-      <p>Saya Diki Dwi Nugroho. Lulus SMK Otomotif tahun 2021 dan sekarang lagi fokus belajar dan berkembang di web Development. Awalnya otodidak dari YouTube, terus lanjut ikut beberapa seminar dan bootcamp biar lebih terarah. Sekarang lagi mendalami HTML, CSS, dan JavaScript buat bikin website yang simpel, responsif, dan enak dipake. Beberapa proyek yang udah jadi ada website profil Kota Surakarta sama sistem absensi digital untuk Karang Taruna Teluk Pucung yang udah dipake untuk kegiatan. Saya suka ngulik sesuatu sampai bener-bener jadi dan kepake, bukan cuma bagus dilihat aja. Masih banyak yang harus dipelajari, tapi saya nikmatin prosesnya.</p>
+      <p>Saya Diki Dwi Nugroho. Lulus SMK Otomotif tahun 2021 dan sekarang lagi fokus belajar dan berkembang di web Development...</p>
     </div>
   </section>
 
-  <section id="services" class="services">
-    <h2>Fokus <span> Saya</span></h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-laptop-code"></i>
-        <h4>Halaman Website Sederhana</h4>
-        <p>Membuat website portfolio sederhana yang rapih di HP dan laptop.</p>
-        <button class="btn-contact" onclick="location.href='#contact'">Hubungi Saya</button>
-      </div>
-      <div class="card">
-        <i class="fas fa-code"></i>
-        <h4>Dasar Frontend</h4>
-        <p>Membuat tampilan website pakai HTML, CSS, dan Javascript dasar.</p>
-        <button class="btn-contact" onclick="location.href='#contact'">Hubungi Saya</button>
-      </div>
-      <div class="card">
-        <i class="fas fa-robot"></i>
-        <h4>AI Assisted Development</h4>
-        <p>Menggabungkan logika coding dengan AI untuk membuat website lebih cepat dan efisien</p>
-        <button class="btn-contact" onclick="location.href='#contact'">Hubungi Saya</button>
-      </div>
-    </div>
-  </section>
+  <section id="services" class="services"><h2>Fokus <span> Saya</span></h2><div class="cards">
+      <div class="card"><i class="fas fa-laptop-code"></i><h4>Halaman Website Sederhana</h4><p>Membuat website portfolio sederhana yang rapih di HP dan laptop.</p><button class="btn-contact" onclick="location.href='#contact'">Hubungi Saya</button></div>
+      <div class="card"><i class="fas fa-code"></i><h4>Dasar Frontend</h4><p>Membuat tampilan website pakai HTML, CSS, dan Javascript dasar.</p><button class="btn-contact" onclick="location.href='#contact'">Hubungi Saya</button></div>
+      <div class="card"><i class="fas fa-robot"></i><h4>AI Assisted Development</h4><p>Menggabungkan logika coding dengan AI untuk membuat website lebih cepat dan efisien</p><button class="btn-contact" onclick="location.href='#contact'">Hubungi Saya</button></div>
+  </div></section>
 
-  <section id="skills" class="skills">
-    <h2>Keahlian <span>Saya</span></h2>
-    <div class="skill-wrap">
-      <div class="tech">
-        <div class="bar-box">
-          <div class="bar-label"><span><i class="fab fa-html5"></i> HTML</span><span>Basic</span></div>
-          <div class="line"><div class="fill" style="width:45%"></div></div>
-        </div>
-        <div class="bar-box">
-          <div class="bar-label"><span><i class="fab fa-css3-alt"></i> CSS</span><span>Basic</span></div>
-          <div class="line"><div class="fill" style="width:35%"></div></div>
-        </div>
-        <div class="bar-box">
-          <div class="bar-label"><span><i class="fab fa-js"></i> Javascript</span><span>Beginner</span></div>
-          <div class="line"><div class="fill" style="width:25%"></div></div>
-        </div>
-        <div class="bar-box">
-          <div class="bar-label"><span><i class="fas fa-robot"></i>AI Assisted Development</span><span>intermediate</span></div>
-          <div class="line"><div class="fill" style="width:70%"></div></div>
-        </div>
-        <div class="bar-box">
-          <div class="bar-label"><span><i class="fas fa-fire"></i> Semangat Belajar</span><span>100%</span></div>
-          <div class="line"><div class="fill" style="width:100%"></div></div>
-        </div>
-      </div>
-      <div class="pro">
-        <div class="circles">
+  <section id="skills" class="skills"><h2>Keahlian <span>Saya</span></h2><div class="skill-wrap"><div class="tech">
+        <div class="bar-box"><div class="bar-label"><span><i class="fab fa-html5"></i> HTML</span><span>Basic</span></div><div class="line"><div class="fill" style="width:45%"></div></div></div>
+        <div class="bar-box"><div class="bar-label"><span><i class="fab fa-css3-alt"></i> CSS</span><span>Basic</span></div><div class="line"><div class="fill" style="width:35%"></div></div></div>
+        <div class="bar-box"><div class="bar-label"><span><i class="fab fa-js"></i> Javascript</span><span>Beginner</span></div><div class="line"><div class="fill" style="width:25%"></div></div></div>
+        <div class="bar-box"><div class="bar-label"><span><i class="fas fa-robot"></i>AI Assisted</span><span>Intermediate</span></div><div class="line"><div class="fill" style="width:70%"></div></div></div>
+        <div class="bar-box"><div class="bar-label"><span><i class="fas fa-fire"></i> Semangat Belajar</span><span>100%</span></div><div class="line"><div class="fill" style="width:100%"></div></div></div>
+  </div><div class="pro"><div class="circles">
           <div class="circle-wrap"><div class="circle"><span>90%</span></div><p>Penasaran</p></div>
           <div class="circle-wrap"><div class="circle"><span>85%</span></div><p>Jujur</p></div>
           <div class="circle-wrap"><div class="circle"><span>80%</span></div><p>Cepat Belajar</p></div>
           <div class="circle-wrap"><div class="circle"><span>85%</span></div><p>Kerja Tim</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div></div></div></section>
 
-  <section id="project" class="project">
-    <h2>Proyek <span>saya</span></h2>
-    <div class="p-grid">
-     <div class="p-card" style="cursor:pointer;" onclick="window.open('https://kay313115.github.io/Kota-Surakarta/')">
-        <img src="375.jpeg" alt="Web profil kota surakarta - Project Diki Dwi Nugroho" style="background:white; object-fit:contain; height:200px;">
-        <h4>Web profil kota surakarta </h4>
-        <p>Ngebahas sejarah, wisata Keraton, sampai kuliner Solo<br>*Klik untuk lihat</p>
-      </div>
-      <div class="p-card" style="cursor:pointer;" onclick="window.open('https://web-kita.my.id')">
-        <img src="123.jpeg" alt="Absensi Teluk Pucung - Project Diki" style="background:white; object-fit:contain; height:200px;">
-        <h4>Tampilan Absensi Sederhana</h4>
-        <p>Proyek asli buat Muda-Mudi Teluk Pucung <br>* Klik untuk lihat</p>
-      </div>
-      <div class="p-card" style="cursor:pointer;" onclick="window.open('https://kay313115.github.io/Landing_Page-Kota_surakarta/')">
-        <img src="346.jpeg" alt="landing page kota surakarta" style="background:white; object-fit:contain; height:200px;">
-        <h4>Tampilan landing page </h4>
-        <p> Klik untuk lihat</p>
-      </div>
-  </section>
+  <section id="project" class="project"><h2>Proyek <span>saya</span></h2><div class="p-grid">
+     <div class="p-card" onclick="window.open('https://kay313115.github.io/Kota-Surakarta/')"><img src="375.jpeg" alt="Web profil kota surakarta" loading="lazy"><h4>Web profil kota surakarta</h4><p>Ngebahas sejarah, wisata Keraton, sampai kuliner Solo<br>*Klik untuk lihat</p></div>
+     <div class="p-card" onclick="window.open('https://web-kita.my.id')"><img src="123.jpeg" alt="Absensi Teluk Pucung" loading="lazy"><h4>Tampilan Absensi Sederhana</h4><p>Proyek asli buat Muda-Mudi Teluk Pucung <br>* Klik untuk lihat</p></div>
+     <div class="p-card" onclick="window.open('https://kay313115.github.io/Landing_Page-Kota_surakarta/')"><img src="346.jpeg" alt="landing page" loading="lazy"><h4>Tampilan landing page</h4><p>Klik untuk lihat</p></div>
+  </div></section>
 
   <section id="contact" class="contact">
-    <div>
-      <h2>Hubungi <span>Saya</span></h2>
-      <p>Ayo bikin sesuatu bareng</p>
-      <p class="small">📧 dwidiki068@gmail.com<br>📱 0815-8505-9946</p>
-      <div class="socials">
-        <a href="https://instagram.com/dikidwin" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/6281585059946" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://tiktok.com/@dutamihijab" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.linkedin.com/in/dikidwi-nugroho-8939112b4" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-    <form id="form">
-      <input type="text" name="name" placeholder=" Nama " required>
-      <input type="email" name="email" placeholder=" Email " required>
-      <input type="text" name="subject" placeholder="Judul">
-      <textarea name="message" placeholder="Tulis Pesanan"></textarea>
-      <button type="submit" class="btn full">Kirim</button>
-    </form>
+    <div><h2>Hubungi <span>Saya</span></h2><p>Ayo bikin sesuatu bareng</p><p class="small">📧 dwidiki068@gmail.com<br>📱 0815-8505-9946</p></div>
+    <form id="form"><input type="text" name="name" placeholder="Nama" required><input type="email" name="email" placeholder="Email" required><input type="text" name="subject" placeholder="Judul"><textarea name="message" placeholder="Tulis Pesan"></textarea><button type="submit" class="btn full">Kirim</button></form>
   </section>
 
   <footer>dibuat oleh &#169; Diki Dwi Nugroho - Portofolio Diki</footer>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script> <!-- defer = biar web ngebut dulu, JS belakangan -->
 </body>
-                                                                 </html>
+</html>
