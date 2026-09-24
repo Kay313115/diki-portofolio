@@ -9,9 +9,9 @@ const LINKS = {
 // TEKS JALAN: Ini yang muncul di efek ketik-ketik. Gue tambahin kata kunci biar SEO
 const texts = [
   "Frontend Developer",
-  "Portofolio Diki Dwi Nugroho", // Kata kunci SEO
+  // Kata kunci SEO
   "Lulusan SMK Otomotif",
-  "Web Developer Bekasi"
+  
 ];
 
 let c = 0; // Index teks ke berapa
