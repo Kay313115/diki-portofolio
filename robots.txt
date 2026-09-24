@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kay313115.github.io/diki-portofolio/sitemap.xml
