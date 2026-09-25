@@ -49,23 +49,26 @@ if (el) {
 }
 
 // ================= FORM KIRIM KE WA =================
-const form = document.getElementById("form");
 
+ // ================= FORM KIRIM KE WA (FIX %0A & NULL) =================
+const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const data = new FormData(e.target);
-  const nama = data.get("name");
-  const email = data.get("email");
-  const judul = data.get("judul");
-  const pesan = data.get("pesan");
+  const nama = data.get("name") || "";
+  const email = data.get("email") || "";
+  const judul = data.get("subject") || "";
+  const pesan = data.get("message") || "";
 
   const noWa = "6281585059946";
+  const text = `Halo mas, ada pesan dari web:
 
-  const text = `Halo mas, ada pesan dari web:%0A%0ANama: ${nama}%0AEmail: ${email}%0AJudul: ${judul}%0APesan: ${pesan}`;
+Nama: ${nama}
+Email: ${email}
+Judul: ${judul}
+Pesan: ${pesan}`;
 
   const url = `https://wa.me/${noWa}?text=${encodeURIComponent(text)}`;
-
   window.open(url, "_blank");
   e.target.reset();
 });
