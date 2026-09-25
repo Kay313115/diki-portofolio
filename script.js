@@ -8,8 +8,8 @@ const LINKS = {
 
 // TEKS JALAN: Ini yang muncul di efek ketik-ketik. Gue tambahin kata kunci biar SEO
 const texts = [
+  "Diki Dwi Nugroho",   // Kata kunci SEO
   "Frontend Developer",
-  // Kata kunci SEO
   "Lulusan SMK Otomotif",
   
 ];
