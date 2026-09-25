@@ -1,4 +1,4 @@
-// LINK SOSMED: Kalo mau ganti link cukup disini aja
+// LINK SOSMED
 const LINKS = {
   instagram: "https://instagram.com/dikidwin",
   whatsapp: "https://wa.me/6281585059946",
@@ -6,38 +6,22 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/dikidwi-nugroho-8939112b4"
 };
 
-// TEKS JALAN: Ini yang muncul di efek ketik-ketik. Gue tambahin kata kunci biar SEO
-const texts = [
-  "Diki Dwi Nugroho",   // Kata kunci SEO
-  "Frontend Developer",
-  "Lulusan SMK Otomotif",
-  
-];
-
-let c = 0; // Index teks ke berapa
-let i = 0; // Index huruf
-let del = false; // Status lagi ngetik atau ngehapus
+// TEKS JALAN
+const texts = ["Diki Dwi Nugroho", "Frontend Developer", "Lulusan SMK Otomotif"];
+let c = 0, i = 0, del = false;
 const el = document.getElementById("typing");
-
 function type() {
   const cur = texts[c];
-  if (del) { i--; } else { i++; } // Kalo del=true hapus, kalo false ngetik
+  if (del) { i--; } else { i++; }
   el.textContent = cur.slice(0, i);
-  let speed = del? 40 : 90; // Kecepatan ketik
-
-  if (!del && i === cur.length) {
-    speed = 1200; // Jeda pas udah selesai ngetik
-    del = true;
-  } else if (del && i === 0) {
-    del = false;
-    c = (c + 1) % texts.length; // Ganti ke teks selanjutnya
-    speed = 400;
-  }
+  let speed = del? 40 : 90;
+  if (!del && i === cur.length) { speed = 1200; del = true; }
+  else if (del && i === 0) { del = false; c = (c + 1) % texts.length; speed = 400; }
   setTimeout(type, speed);
 }
 type();
 
-// FORM KONTAK: Biar pas klik Kirim gak reload, cuma muncul alert
+// FORM KONTAK
 const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -46,36 +30,39 @@ form.addEventListener("submit", (e) => {
   e.target.reset();
 });
 
-// NAV AKTIF: Biar menu biru ngikutin scroll
+// NAV + HAMBURGER AUTO KESILANG
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
 const nav = document.querySelectorAll(".menu a");
 const sections = document.querySelectorAll("section");
 
+// 1. Klik hamburger
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  hamburger.textContent = menu.classList.contains('active')? '✕' : '☰';
+});
+
+// 2. INI KUNCINYA JAN - Klik menu langsung auto kesilang
 nav.forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.forEach((n) => n.classList.remove("active"));
-    link.classList.add("active");
+  link.addEventListener('click', () => {
+    nav.forEach((n) => n.classList.remove('active'));
+    link.classList.add('active');
+
+    // auto tutup
+    menu.classList.remove('active');
+    hamburger.textContent = '☰';
   });
 });
 
+// 3. Scroll biar biru ngikutin
 window.addEventListener("scroll", () => {
   let cur = "";
   sections.forEach((s) => {
     const top = s.offsetTop - 120;
-    if (scrollY >= top) {
-      cur = s.id;
-    }
+    if (scrollY >= top) { cur = s.id; }
   });
   nav.forEach((a) => {
     a.classList.remove("active");
-    if (a.getAttribute("href") === "#" + cur) {
-      a.classList.add("active");
-    }
+    if (a.getAttribute("href") === "#" + cur) { a.classList.add("active"); }
   });
-});
-// HAMBURGER
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
-hamburger.addEventListener('click', () => {
-  menu.classList.toggle('active');
-  hamburger.textContent = menu.classList.contains('active') ? '✕' : '☰';
 });
